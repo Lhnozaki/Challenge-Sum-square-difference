@@ -4,30 +4,19 @@ class SumOfASquare {
   }
 
   sumOfSquares() {
-    let arr = [];
+    let sum = 0;
     for (let i = 1; i <= this.number; i++) {
-      var square = i * i;
-      arr.push(square);
+      let square = i * i;
+      sum += square;
     }
-
-    let sum = arr.reduce(function(p, c) {
-      return p + c;
-    });
-
     return sum;
   }
 
   squareOfTheSums() {
-    var arr = [];
-
+    let sum = 0;
     for (let i = 1; i <= this.number; i++) {
-      arr.push(i);
+      sum += i;
     }
-
-    var sum = arr.reduce(function(p, c) {
-      return p + c;
-    });
-
     return Math.pow(sum, 2);
   }
 }
